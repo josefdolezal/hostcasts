@@ -3,17 +3,12 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
-
+# Routes over shows
 GET     /shows                      controllers.ShowsController.index
 GET     /shows/new                  controllers.ShowsController.create
 GET     /shows/:id                  controllers.ShowsController.show(id: Integer)
 
+# Routes over episodes
 GET     /shows/:sid/episodes/new    controllers.EpisodesController.create(sid: Int)
 GET     /shows/:sid/episodes/:eid   controllers.EpisodesController.episode(sid: Int, eid: Int)
 
