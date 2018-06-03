@@ -97,6 +97,23 @@ Temporary Items
 *.class
 *.log
 
+### IntelliJ Defaults ###
+
+logs
+project/project
+project/target
+target
+tmp
+.history
+dist
+/.idea
+/*.iml
+/out
+/.idea_modules
+/.classpath
+/.project
+/RUNNING_PID
+/.settings%
 
 # End of https://www.gitignore.io/api/macos,intellij,scala
 
