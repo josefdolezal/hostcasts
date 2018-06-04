@@ -16,7 +16,7 @@ class ShowsController @Inject()(cc: ControllerComponents, showsRepo: ShowsReposi
     }
   }
 
-  def show(id: Long) = Action.async {
+  def show(id: Long) = Action.async { implicit request =>
     val data = for {
       show <- showsRepo.findById(id)
       episodes <- episodesRepo.getByShowId(id)

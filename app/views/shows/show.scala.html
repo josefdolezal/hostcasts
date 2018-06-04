@@ -1,4 +1,4 @@
-@(show: Show, episodes: Seq[Episode])
+@(show: Show, episodes: Seq[Episode])(implicit request: RequestHeader)
 
 @main("Show") {
     <div class="row">
@@ -10,11 +10,19 @@
         </p>
     </div>
     <div class="row">
+        <h3>Show link</h3>
+    </div>
+    <div class="row">
+        <a href="@routes.ShowsAPIController.show(show.id)">Show stream URL</a>
+        <pre>
+            <code>@routes.ShowsAPIController.show(show.id).absoluteURL</code>
+        </pre>
+    </div>
+    <div class="row">
         <h3>Episodes</h3>
     </div>
     <div class="row">
         @if(episodes.reverse.isEmpty) {
-
             <h5>No eposides yet.</h5>
         } else {
             <table class="table table-striped">
