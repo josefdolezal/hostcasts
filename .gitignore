@@ -114,6 +114,7 @@ dist
 /.project
 /RUNNING_PID
 /.settings%
+db.sql
 
 # End of https://www.gitignore.io/api/macos,intellij,scala
 
