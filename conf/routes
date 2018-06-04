@@ -10,7 +10,8 @@ POST    /shows/new                  controllers.ShowsController.postCreate
 GET     /shows/:id                  controllers.ShowsController.show(id: Long)
 
 # Routes over episodes
-GET     /shows/:sid/episodes/new    controllers.EpisodesController.create(sid: Long)
+GET     /shows/:sid/episodes/new    controllers.EpisodesController.getCreate(sid: Long)
+POST    /shows/:sid/episodes/new    controllers.EpisodesController.postCreate(sid: Long)
 GET     /shows/:sid/episodes/:eid   controllers.EpisodesController.episode(sid: Long, eid: Long)
 
 # Map static resources from the /public folder to the /assets URL path

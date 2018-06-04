@@ -26,6 +26,13 @@ class EpisodesRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(imp
 
   private val episodes = TableQuery[EpisodesTable]
 
+  def create(title: String, description: String): Future[Episode] = db.run {
+    (episodes.map(s => (s.title, s.description))
+      returning episodes.map(_.id)
+      into((data, id) => Episode(id, data._1, data._2) )
+      ) += (title, description)
+  }
+
   def findById(id: Long): Future[Option[Episode]] = db.run(episodes.filter(_.id === id).result.headOption)
 
   def getByShowId(showId: Long): Future[Seq[Episode]] = all
