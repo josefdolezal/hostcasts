@@ -22,7 +22,7 @@
                 <tbody>
                     @for(show <- shows) {
                         <tr>
-                            <td>@show.title</td>
+                            <td><a href="@routes.ShowsController.show(show.id)">@show.title</a></td>
                             <td>@show.description</td>
                         </tr>
                     }

@@ -34,6 +34,8 @@ class ShowsRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(implic
     ) += (title, description)
   }
 
+  def findById(id: Long): Future[Option[Show]] = db.run(shows.filter(_.id === id).result.headOption)
+
   def all: Future[Seq[Show]] = db.run {
     shows.result
   }

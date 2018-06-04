@@ -1,5 +1,41 @@
-@()
+@(show: Show, episodes: Seq[Episode])
 
 @main("Show") {
-    <h1>Show</h1>
+    <div class="row">
+        <h1>@show.title</h1>
+    </div>
+    <div class="row">
+        <p>
+            @show.description
+        </p>
+    </div>
+    <div class="row">
+        <h3>Episodes</h3>
+    </div>
+    <div class="row">
+        @if(episodes.reverse.isEmpty) {
+
+            <h5>No eposides yet.</h5>
+        } else {
+            <table>
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                @for(episode <- episodes) {
+                    <tr>
+                        <td>@episode.title</td>
+                        <td>@episode.description</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+    <div class="row">
+        <a href="@routes.EpisodesController.create(show.id)" class="btn btn-primary">Add new episode</a>
+    </div>
 }

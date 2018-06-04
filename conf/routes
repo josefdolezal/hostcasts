@@ -7,11 +7,11 @@
 GET     /shows                      controllers.ShowsController.shows
 GET     /shows/new                  controllers.ShowsController.getCreate
 POST    /shows/new                  controllers.ShowsController.postCreate
-GET     /shows/:id                  controllers.ShowsController.show(id: Integer)
+GET     /shows/:id                  controllers.ShowsController.show(id: Long)
 
 # Routes over episodes
-GET     /shows/:sid/episodes/new    controllers.EpisodesController.create(sid: Int)
-GET     /shows/:sid/episodes/:eid   controllers.EpisodesController.episode(sid: Int, eid: Int)
+GET     /shows/:sid/episodes/new    controllers.EpisodesController.create(sid: Long)
+GET     /shows/:sid/episodes/:eid   controllers.EpisodesController.episode(sid: Long, eid: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
