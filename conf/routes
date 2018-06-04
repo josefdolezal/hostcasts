@@ -5,7 +5,8 @@
 
 # Routes over shows
 GET     /shows                      controllers.ShowsController.shows
-GET     /shows/new                  controllers.ShowsController.create
+GET     /shows/new                  controllers.ShowsController.getCreate
+POST    /shows/new                  controllers.ShowsController.postCreate
 GET     /shows/:id                  controllers.ShowsController.show(id: Integer)
 
 # Routes over episodes

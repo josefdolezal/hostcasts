@@ -1,5 +1,19 @@
-@()
+@import helper._
+@import models.forms.CreateShowForm
+@(showForm: Form[CreateShowForm])(implicit request: RequestHeader, messages: Messages)
 
 @main("Create show") {
-    <h1>Create show</h1>
+    <div class="row">
+        <h1>Create show</h1>
+    </div>
+
+    <div class="row">
+        @views.html.helper.form(action = routes.ShowsController.postCreate) {
+            @CSRF.formField
+            @inputText(showForm("title"), 'class -> "form-control", '_label -> "Název")
+            @textarea(showForm("description"), 'class -> "form-control", '_label -> "Popis")
+
+            <button class="btn btn-success" type="submit">Save</button>
+        }
+    </div>
 }
