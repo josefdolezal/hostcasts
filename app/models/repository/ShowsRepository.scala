@@ -1,4 +1,4 @@
-package repository
+package models.repository
 
 import javax.inject.{Inject, Singleton}
 

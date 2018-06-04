@@ -6,16 +6,16 @@ import play.api.mvc.{AbstractController, ControllerComponents}
 @Singleton
 class ShowsController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  def index = Action {
-    Ok(views.html.index("index"))
+  def shows = Action {
+    Ok(views.html.shows.shows())
   }
 
   def show(id: Int) = Action {
-    Ok(views.html.index("show"))
+    Ok(views.html.shows.show())
   }
 
   def create = Action {
-    Ok(views.html.index("create"))
+    Ok(views.html.shows.create())
   }
 
 }
