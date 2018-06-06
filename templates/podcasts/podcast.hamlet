@@ -1,0 +1,6 @@
+<div .container>
+    <div .row>
+        <h1>#{podcastTitle podcast}
+        
+        
+        <p>#{podcastDescription podcast}
