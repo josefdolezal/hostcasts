@@ -18,5 +18,5 @@ Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived
     deriving Show
 Podcast json
     title Text
-    description Text
+    description Textarea
     url Text Maybe

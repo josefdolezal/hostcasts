@@ -30,6 +30,7 @@ library
       Handler.Profile
       Handler.Podcasts
       Handler.Podcast
+      Handler.CreatePodcast
       Import
       Import.NoFoundation
       Model
