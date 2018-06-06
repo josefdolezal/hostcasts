@@ -28,11 +28,13 @@ library
       Handler.Common
       Handler.Home
       Handler.Profile
+      Handler.Podcasts
       Import
       Import.NoFoundation
       Model
       Settings
       Settings.StaticFiles
+      Repository.PodcastsRepository
   other-modules:
       Paths_hostcasts
   hs-source-dirs:

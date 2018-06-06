@@ -1,0 +1,10 @@
+<h1>Podcasts
+
+$if null podcasts
+    <p>No podcasts yet
+$else
+    <table>
+        $forall Entity _ podcast <- podcasts
+            <tr>
+                <td>#{podcastTitle podcast}
+                <td>#{podcastDescription podcast}
