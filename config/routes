@@ -16,3 +16,4 @@
 /podcasts               PodcastsR       GET
 !/podcasts/new          CreatePodcastR  GET POST
 !/podcasts/#PodcastId   PodcastR        GET
+/podcasts/#PodcastId/episodes/#EpisodeId EpisodeR GET

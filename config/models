@@ -20,3 +20,6 @@ Podcast json
     title Text
     description Textarea
     url Text Maybe
+Episode json
+    title Text
+    description Textarea
