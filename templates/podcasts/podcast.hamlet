@@ -4,3 +4,23 @@
         
         
         <p>#{podcastDescription podcast}
+
+    <div .row>
+        <h3>Episodes
+
+        $if null episodes
+            <p>No episodes yet!
+        $else
+            <table .table .table-striped>
+                <thead>
+                    <tr>
+                        <th>Title
+                        <th>Description
+                <tbody>
+                    $forall Entity episodeId episode <- episodes
+                        <tr>
+                            <td><a href=@{EpisodeR podcastId episodeId}>#{episodeTitle episode}
+                            <td>#{episodeDescription episode}
+    
+    <div .row>
+        <a href=@{CreateEpisodeR podcastId} .btn .btn-primary>Add new episode
