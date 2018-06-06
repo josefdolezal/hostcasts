@@ -1,0 +1,8 @@
+<div .container>
+    <div .row>
+        <div .col-12>
+            <h1>Add new episode
+
+            <form method=POST action=@{CreateEpisodeR podcastId}>
+                ^{widget}
+                <button type=submit .btn .btn-primary>Create

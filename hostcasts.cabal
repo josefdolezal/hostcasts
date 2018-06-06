@@ -32,6 +32,7 @@ library
       Handler.Podcast
       Handler.CreatePodcast
       Handler.Episode
+      Handler.CreateEpisode
       Import
       Import.NoFoundation
       Model
