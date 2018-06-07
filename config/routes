@@ -19,3 +19,4 @@
 
 !/podcasts/#PodcastId/episodes/new CreateEpisodeR GET POST
 !/podcasts/#PodcastId/episodes/#EpisodeId EpisodeR GET
+/api/v1/podcasts/#PodcastId/feed.xml PodcastAPIR GET

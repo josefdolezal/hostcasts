@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4f27b904301559554eddd186f5846f9a95c92b5bc4c4d2c2904efd577387c41d
+-- hash: 7e303176d9a27c9902140d276e069e7f8f99cb164b0844c9a8479ffda9f61026
 
 name:           hostcasts
 version:        0.0.0
@@ -23,22 +23,24 @@ flag library-only
 library
   exposed-modules:
       Application
+      Forms.PodcastsForms
       Foundation
       Handler.Comment
       Handler.Common
-      Handler.Home
-      Handler.Profile
-      Handler.Podcasts
-      Handler.Podcast
+      Handler.CreateEpisode
       Handler.CreatePodcast
       Handler.Episode
-      Handler.CreateEpisode
+      Handler.Home
+      Handler.Podcast
+      Handler.PodcastAPI
+      Handler.Podcasts
+      Handler.Profile
       Import
       Import.NoFoundation
       Model
+      Repository.PodcastsRepository
       Settings
       Settings.StaticFiles
-      Repository.PodcastsRepository
   other-modules:
       Paths_hostcasts
   hs-source-dirs:
@@ -77,6 +79,8 @@ library
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.3
+    , xml-conduit
+    , xml-hamlet
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7
@@ -133,6 +137,8 @@ executable hostcasts
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.3
+    , xml-conduit
+    , xml-hamlet
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7
@@ -149,7 +155,13 @@ test-suite hostcasts-test
   other-modules:
       Handler.CommentSpec
       Handler.CommonSpec
+      Handler.CreateEpisodeSpec
+      Handler.CreatePodcastSpec
+      Handler.EpisodeSpec
       Handler.HomeSpec
+      Handler.PodcastAPISpec
+      Handler.PodcastSpec
+      Handler.PodcastsSpec
       Handler.ProfileSpec
       TestImport
       Paths_hostcasts
@@ -193,6 +205,8 @@ test-suite hostcasts-test
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.3
+    , xml-conduit
+    , xml-hamlet
     , yaml >=0.8 && <0.9
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7

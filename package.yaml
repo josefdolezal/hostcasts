@@ -45,6 +45,8 @@ dependencies:
 - case-insensitive
 - wai
 - foreign-store
+- xml-hamlet
+- xml-conduit
 
 # The library contains all of our application code. The executable
 # defined below is just a thin wrapper.
