@@ -19,7 +19,13 @@ Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived
 Podcast json
     title Text
     description Textarea
+    language Text
+    tags Text Maybe
+    copyright Text Maybe
+    isExplicit Bool
     url Text Maybe
+    cover Text Maybe
+    userId UserId
 Episode json
     title Text
     description Textarea
