@@ -1,8 +1,0 @@
-<div .container>
-    <div .row>
-        <div .col-12>
-            <h1>Craete new Podcast
-
-            <form method=POST action=@{CreatePodcastR}>
-                ^{widget}
-                <button type=submit .btn .btn-primary>Create
