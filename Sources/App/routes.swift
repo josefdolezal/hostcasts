@@ -6,4 +6,6 @@ public func routes(_ router: Router) throws {
     router.get("hello") { req in
         return "Hello, world!"
     }
+
+    try router.register("todo", controller: TodoController.self)
 }

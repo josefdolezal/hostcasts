@@ -21,3 +21,11 @@ final class TodoController {
         }.transform(to: .ok)
     }
 }
+
+extension TodoController: ControllerRouteCollection {
+    func boot(router: Router) throws {
+        router.get(use: index)
+        router.post("create", use: create)
+        router.delete("delete", use: delete)
+    }
+}
