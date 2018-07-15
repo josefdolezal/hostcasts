@@ -18,4 +18,10 @@ extension Router {
 
         try router.register(collection: collection)
     }
+
+    func register<T: ControllerRouteCollection>(controller: T.Type) throws {
+        let collection = controller.init()
+
+        try register(collection: collection)
+    }
 }
