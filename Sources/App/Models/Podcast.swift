@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Podcast.swift
 //  App
 //
 //  Created by Josef Dolezal on 16/07/2018.
@@ -8,7 +8,7 @@
 import Vapor
 import FluentSQLite
 
-final class Show: SQLiteModel {
+final class Podcast: SQLiteModel {
     var id: Int?
 
     var title: String

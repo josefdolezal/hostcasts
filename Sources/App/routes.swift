@@ -8,6 +8,6 @@ public func routes(_ router: Router) throws {
     }
 
     try router.register("todo", controller: TodoController.self)
-    try router.register("shows", controller: ShowsController.self)
+    try router.register("podcasts", controller: PodcastsController.self)
     try router.register(controller: HomeController.self)
 }
